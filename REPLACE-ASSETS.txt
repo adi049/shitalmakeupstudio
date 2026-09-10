@@ -1,0 +1,11 @@
+SHITAL GURAV MAKEUP STUDIO - ASSET NOTES
+
+Replace these files when the final client assets are available:
+images/logo/logo.png -> official logo
+images/owner/owner-portrait.jpg -> Shital Gurav owner portrait
+images/bridal/hero-bride.jpg -> preferred hero bridal photograph
+images/bridal/bride-editorial.jpg -> editorial bridal photograph
+images/bridal/bride-studio.jpg -> studio bridal photograph
+
+Contact placeholders are intentionally kept until the real phone, email,
+location, Instagram, Facebook, WhatsApp and Google Maps details are provided.
