@@ -1077,3 +1077,240 @@ ant; }
   .marquee-track { animation: none !important; }
   body { animation: none !important; }
 }
+
+
+/* SHITAL GURAV UPDATE: remove legacy hero scroll helper */
+.hero-scroll { display: none !important; }
+
+/* Fixed luxury quick-contact buttons */
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 24px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: flex-end;
+}
+.floating-contact__item {
+  min-width: 96px;
+  height: 42px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(211,185,140,.6);
+  background: rgba(12,9,7,.9);
+  color: #f1e7d7;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: .56rem;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.2);
+  transition: transform .3s ease, background .3s ease, color .3s ease, border-color .3s ease;
+}
+.floating-contact__item:hover {
+  transform: translateX(-5px);
+  background: #d3b98c;
+  border-color: #d3b98c;
+  color: #100d09;
+}
+.floating-contact__item--call {
+  background: rgba(211,185,140,.94);
+  color: #100d09;
+}
+@media (max-width: 768px) {
+  .floating-contact { right: 10px; bottom: 12px; gap: 7px; }
+  .floating-contact__item {
+    min-width: 82px;
+    height: 38px;
+    padding: 0 11px;
+    font-size: .5rem;
+    letter-spacing: .11em;
+  }
+}
+
+
+/* SHITAL GURAV UPDATE 3: location + recognizable contact app icons */
+.floating-contact__item {
+  gap: 9px;
+}
+.floating-contact__item svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  fill: currentColor;
+  stroke: none;
+}
+.floating-contact__item--instagram svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+.contact-location-card {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 34px 38px;
+  border: 1px solid rgba(84, 64, 40, .18);
+  background: rgba(255,255,255,.26);
+  text-align: center;
+}
+.contact-location-card .contact-location-label {
+  margin: 0 0 10px;
+  font-size: .68rem;
+  letter-spacing: .28em;
+  color: #9b7846;
+}
+.contact-location-card h2 {
+  margin: 0 0 12px;
+}
+.contact-location-card p:not(.contact-location-label) {
+  margin: 0 auto 20px;
+  max-width: 760px;
+  line-height: 1.8;
+}
+.contact-location-card a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid rgba(84,64,40,.35);
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: .14em;
+  font-size: .62rem;
+  transition: .3s ease;
+}
+.contact-location-card a:hover {
+  background: #d3b98c;
+  border-color: #d3b98c;
+}
+.contact-map-wrap {
+  width: 100%;
+  min-height: 440px;
+  border: 1px solid rgba(84,64,40,.18);
+  overflow: hidden;
+}
+.contact-map {
+  display: block;
+  width: 100%;
+  height: 440px;
+  border: 0;
+}
+@media (max-width: 768px) {
+  .contact-location-card {
+    padding: 26px 20px;
+  }
+  .contact-map-wrap,
+  .contact-map {
+    min-height: 360px;
+    height: 360px;
+  }
+  .floating-contact__item svg {
+    width: 15px;
+    height: 15px;
+    flex-basis: 15px;
+  }
+}
+
+
+/* UPDATE 4: icon-only floating contact buttons */
+.floating-contact {
+  position: fixed;
+  right: 22px;
+  bottom: 26px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.floating-contact__item {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(211,185,140,.7);
+  border-radius: 50%;
+  background: rgba(14,11,9,.92);
+  color: #f4eadb;
+  text-decoration: none;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.03);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), background .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+.floating-contact__item:hover {
+  transform: translateY(-4px) scale(1.07);
+  background: #d3b98c;
+  color: #120e0a;
+  border-color: #ead5b2;
+  box-shadow: 0 16px 36px rgba(0,0,0,.3);
+}
+.floating-contact__item svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+.floating-contact__item--instagram svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+.floating-contact__item--call {
+  background: rgba(211,185,140,.96);
+  color: #120e0a;
+}
+.floating-contact__item--call:hover {
+  background: #f0d9ad;
+}
+.contact-location-card {
+  position: relative;
+  overflow: hidden;
+}
+.contact-location-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(211,185,140,.14), transparent 48%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 12px;
+    bottom: 14px;
+    gap: 8px;
+  }
+  .floating-contact__item {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+  }
+  .floating-contact__item svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+/* UPDATE 5: verified location destination + working hours */
+.contact-hours {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto 24px;
+  text-align: center;
+  font-size: .78rem;
+  line-height: 1.8;
+  letter-spacing: .06em;
+}
+.contact-hours strong {
+  display: block;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .62rem;
+  font-weight: 500;
+  color: #9b7846;
+}

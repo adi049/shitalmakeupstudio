@@ -69,5 +69,3 @@ connect it to WhatsApp, Email, Google Sheets or a backend API.
 ---
 
 © 2026 Shital Gurav Makeup Studio. All rights reserved.
-"# shitalmakeupstudio" 
-"# shitalmakeupstudio" 
