@@ -1,0 +1,440 @@
+/* FINAL LUXURY POLISH — Shital Gurav Makeup Studio */
+:root{
+  --ink:#100c0b;--ink2:#1b1112;--paper:#f7f0e6;--paper2:#eee2d2;
+  --gold:#c8a15a;--gold2:#efd39b;--blush:#e8b9bd;--rose:#c97889;
+  --blue:#bfd9e7;--blue2:#8eb7cf;--sage:#a9b99c;--emerald:#234b3e;
+  --burgundy:#6b303d;--cream:#fffaf3;--muted:#77685d;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif;
+}
+body{background:var(--paper);color:#1a1210}
+.site{background:var(--paper)}
+/* Header / logo */
+.site-header{padding:22px clamp(18px,4vw,68px);backdrop-filter:blur(12px);transition:.45s ease;background:linear-gradient(180deg,rgba(10,7,6,.55),transparent)}
+.site-header.scrolled{position:fixed;background:rgba(16,12,11,.94);box-shadow:0 8px 35px rgba(0,0,0,.22)}
+.wordmark{display:grid;grid-template-columns:48px auto;grid-template-rows:auto auto;column-gap:13px;align-items:center}
+.wordmark img{grid-row:1/3;width:48px!important;height:48px!important;object-fit:contain;background:#050403;border:1px solid rgba(239,211,155,.7)!important;border-radius:50%;box-shadow:0 0 25px rgba(239,211,155,.12)}
+.wordmark span{font:500 19px var(--serif);letter-spacing:.16em;line-height:1;color:#fff}
+.wordmark small{display:block;margin-top:7px;color:var(--gold2);font:500 7px var(--sans);letter-spacing:.35em}
+.primary-nav{gap:clamp(12px,1.8vw,28px);font-size:9px}
+.primary-nav a{position:relative;padding:8px 0}
+.primary-nav a:not(.nav-cta):after{content:"";position:absolute;left:0;bottom:1px;width:0;height:1px;background:var(--gold2);transition:.35s}
+.primary-nav a:hover:after,.primary-nav a.active:after{width:100%}
+.primary-nav .nav-cta{padding:14px 18px;border-color:rgba(239,211,155,.75);background:rgba(239,211,155,.06);box-shadow:inset 0 0 0 1px rgba(239,211,155,.06)}
+.primary-nav .nav-cta:hover{background:var(--gold2);color:var(--ink)}
+/* Intro */
+.intro{background:radial-gradient(circle at center,#17110c 0,#050403 55%,#000 100%)}
+.logo-wrap{width:clamp(200px,31vw,390px)}
+.brand-lockup{font-size:clamp(3.2rem,8vw,7.2rem);margin-top:-22px}
+.descriptor{font-size:clamp(.58rem,1.2vw,.82rem);letter-spacing:.48em;color:var(--gold2)}
+/* General type */
+.eyebrow{font-weight:500;letter-spacing:.34em}
+.section-pad{padding:clamp(85px,10vw,150px) clamp(20px,7vw,115px)}
+.section-head{margin:34px 0 58px}
+.section-head h2,.section-pad h2{letter-spacing:-.035em}
+/* Color rhythm */
+.intro-section{background:linear-gradient(135deg,var(--paper) 0%,#f8eee2 58%,#e9d8d0 100%)}
+.experience-stat{background:linear-gradient(100deg,var(--burgundy),#8d4d59 55%,#6b303d);position:relative;overflow:hidden}
+.experience-stat:after{content:"";position:absolute;inset:-50%;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 35%);animation:ambient 9s linear infinite;pointer-events:none}
+.experience-stat>*{position:relative;z-index:1}
+.experiences{background:linear-gradient(135deg,#0d0a09,#1c1113 55%,#10231e)}
+.bridal{background:linear-gradient(135deg,#f8f0e6,#f0e1d5 55%,#e7eef0)}
+.duo-section{background:var(--ink)}
+.studio-panel{background:linear-gradient(135deg,#17100f,#34201d)}
+.academy-panel{background:linear-gradient(135deg,#193a31,#2a5c4b)}
+.showcase{background:linear-gradient(110deg,#0d0a09,#1b1214 45%,#13251f)}
+.gallery-preview{background:linear-gradient(135deg,#f7efe5,#e8eef0 72%,#eee1df)}
+/* Images: never let faces disappear */
+.hero-media img{object-position:center 31%!important}
+.intro-image img{object-position:center 22%!important}
+.experience-card:nth-child(1) img{object-position:center 30%!important}
+.experience-card:nth-child(2) img{object-position:center 24%!important}
+.experience-card:nth-child(3) img{object-position:center 27%!important}
+.experience-card:nth-child(4) img{object-position:center 28%!important}
+.experience-card:nth-child(5) img{object-position:center 23%!important}
+.experience-card:nth-child(6) img{object-position:center 25%!important}
+.bridal-feature img{object-position:center 28%!important}
+.bridal-small img{object-position:center 24%!important}
+.duo-image img{object-position:center 25%!important}
+.showcase-track img{object-position:center 25%!important}
+.gallery-grid img{object-position:center 25%!important}
+/* Cards */
+.experience-card{border:1px solid rgba(239,211,155,.22);border-radius:2px;box-shadow:0 16px 45px rgba(0,0,0,.16)}
+.experience-card:before{content:"";position:absolute;z-index:2;inset:12px;border:1px solid rgba(255,255,255,.14);pointer-events:none;opacity:0;transition:.5s}
+.experience-card:hover:before{opacity:1}
+.experience-card h3{font-size:clamp(36px,3.4vw,50px)}
+.duo-panel{min-height:690px}
+.duo-panel:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 25%,rgba(239,211,155,.12),transparent 32%)}
+.duo-content .button{margin-top:10px}
+/* Gallery */
+.gallery-grid{display:grid!important;grid-template-columns:1.1fr .75fr .75fr;grid-auto-rows:260px;gap:14px}
+.gallery-grid img{border-radius:2px;box-shadow:0 12px 30px rgba(40,25,15,.13);transition:transform .8s,filter .5s}
+.gallery-grid img:nth-child(1){grid-row:span 2}.gallery-grid img:nth-child(4){grid-column:span 2}.gallery-grid img:hover{transform:scale(1.025);filter:saturate(1.06)}
+/* All page heroes */
+.page-hero{min-height:min(78svh,780px);position:relative;overflow:hidden}
+.page-hero-image img{object-position:center 28%!important;transform:scale(1.02);transition:transform 1.4s ease}
+.page-view{background:var(--paper)}
+.page-hero-copy{max-width:980px}
+.page-hero-copy h1{font-size:clamp(4.5rem,9vw,9.5rem);line-height:.78}
+.page-hero-copy p:last-child{letter-spacing:.24em}
+.page-hero:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(0deg,rgba(8,5,4,.62),transparent);pointer-events:none}
+/* About */
+.about-founder{background:linear-gradient(135deg,var(--paper),#f1e3d8)}
+.founder-portrait{box-shadow:0 22px 60px rgba(60,35,20,.14)}
+.philosophy{background:linear-gradient(135deg,#11100f,#24151a 60%,#193b31)!important}
+.journey{background:var(--paper)}
+.journey-grid article,.credential-grid article{background:rgba(255,255,255,.48);border:1px solid rgba(107,48,61,.18);transition:.45s}
+.journey-grid article:hover,.credential-grid article:hover{transform:translateY(-7px);border-color:var(--gold);box-shadow:0 18px 40px rgba(68,37,25,.1)}
+.recognition{background:linear-gradient(135deg,#0e0a09,#281419,#17382f)!important}
+.credentials{background:linear-gradient(120deg,#e9f0f2,var(--paper))}
+.moments{background:#122b24!important}
+.certifications{background:linear-gradient(135deg,var(--paper),#f4ddd8)}
+/* Studio */
+.studio-page .services{background:linear-gradient(135deg,#10100f,#211316 52%,#17392f)!important}
+.services-grid article{border:1px solid rgba(239,211,155,.22);overflow:hidden;transition:.5s}
+.services-grid article:hover{transform:translateY(-8px);box-shadow:0 25px 55px rgba(0,0,0,.25)}
+.services-grid article img{object-position:center 25%!important}
+.studio-bridal{background:linear-gradient(135deg,#f7efe5,#e9e1ef)}
+.experience-strip{background:linear-gradient(135deg,#11100f,#6b303d 60%,#234b3e)!important}
+/* Academy */
+.academy-page{background:var(--emerald)!important}
+.academy-page .page-hero-image img{object-position:center 30%!important}
+.academy-page .academy-placeholder>img{filter:saturate(.8) brightness(.72)}
+.academy-page .academy-intro{background:linear-gradient(135deg,#f8f0e7,#e4edf1)}
+.academy-page .course-section{background:linear-gradient(135deg,#17352d,#2b5c4c)!important}
+.course-card{background:rgba(255,250,243,.97)!important;border:1px solid rgba(239,211,155,.4);box-shadow:0 18px 50px rgba(0,0,0,.14);transition:.5s}
+.course-card:hover{transform:translateY(-9px);box-shadow:0 28px 65px rgba(0,0,0,.25)}
+.course-card.featured{background:linear-gradient(145deg,#17100e,#35201f)!important;border-color:var(--gold)}
+.academy-placeholder-band{background:linear-gradient(120deg,#234b3e,#1a302b)!important}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero-badges span{padding:8px 11px;border:1px solid rgba(239,211,155,.4);font:500 8px var(--sans);letter-spacing:.18em;color:var(--gold2)}
+/* Packages */
+.packages-page{background:var(--burgundy)!important}
+.packages-page .pricing-section{background:linear-gradient(135deg,#f8f0e7,#e6eef1)!important}
+.price-list article{background:rgba(255,255,255,.72)!important;border:1px solid rgba(107,48,61,.18);box-shadow:0 12px 35px rgba(54,25,24,.09);transition:.5s}
+.price-list article:hover{transform:translateY(-8px);box-shadow:0 25px 55px rgba(54,25,24,.16);border-color:var(--rose)}
+.price-list article.price-featured{background:linear-gradient(145deg,#211417,#6b303d)!important;border-color:var(--gold)}
+.packages-page .prebridal{background:linear-gradient(135deg,#6b303d,#8c4c5b,#234b3e)!important}
+.packages-page .page-cta{background:linear-gradient(135deg,var(--blush),#dcebf0)!important}
+/* Contact */
+.contact-page{background:linear-gradient(135deg,#f8f0e7,#e8eef0)!important}
+.contact-body{background:transparent!important}
+.contact-grid{gap:16px}
+.contact-card{min-height:245px!important;padding:32px!important;border-radius:2px!important;position:relative;overflow:hidden;transition:.5s!important}
+.contact-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 55%);pointer-events:none}
+.contact-card:nth-child(1){background:linear-gradient(135deg,#211616,#47242d)!important}
+.contact-card:nth-child(2){background:linear-gradient(135deg,#183c31,#285e4d)!important}
+.contact-card:nth-child(3){background:linear-gradient(135deg,#eef5f7,#f8e8e4)!important}
+.contact-card:nth-child(4){background:linear-gradient(135deg,#5a2634,#8e4c61)!important}
+.contact-card:nth-child(5){background:linear-gradient(135deg,#bcd9e7,#e7eef0)!important}
+.contact-card:nth-child(6){background:linear-gradient(135deg,#1c1715,#35241d)!important}
+.contact-card strong{font-size:clamp(23px,2.3vw,36px)!important;line-height:1.05;max-width:100%}
+.contact-card:nth-child(3) strong,.contact-card:nth-child(5) strong{color:#241b17!important}
+.contact-card:hover{transform:translateY(-7px)!important;box-shadow:0 25px 55px rgba(30,15,12,.18)!important}
+.location-section{background:linear-gradient(120deg,#0d0b0a,#17352d 62%,#6b303d)!important}
+.map-card{height:540px;border:1px solid rgba(239,211,155,.6)!important;box-shadow:0 25px 65px rgba(0,0,0,.22)}
+.map-card iframe{filter:saturate(.7) contrast(1.05)!important}
+.map-caption{position:absolute;left:18px;top:18px;padding:12px 14px;background:rgba(13,11,10,.88);color:#fff;border:1px solid rgba(239,211,155,.5);display:flex;flex-direction:column;gap:4px;z-index:2}
+.map-caption span{font:500 12px var(--serif);letter-spacing:.05em}.map-caption small{font:500 7px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+.map-overlay-link{z-index:3!important}
+.contact-page .page-cta{background:linear-gradient(135deg,#f1c8cb,#d7e9f0)!important}
+/* Booking */
+.booking-page{background:linear-gradient(135deg,#100c0b,#1d1315 55%,#17372e)!important}
+.booking-shell{gap:clamp(35px,6vw,90px)!important}
+.booking-intro{position:relative}
+.booking-visual{height:310px!important;border:1px solid rgba(239,211,155,.35);box-shadow:0 20px 55px rgba(0,0,0,.25)}
+.booking-visual img{object-position:center 23%!important}
+.booking-form{border:1px solid rgba(107,48,61,.18)!important;box-shadow:0 25px 65px rgba(0,0,0,.22)!important;background:linear-gradient(135deg,#fffaf3,#eef5f7)!important}
+.booking-form label{font-weight:500;color:#3c2c25}
+.booking-form input,.booking-form select,.booking-form textarea{border:1px solid #cdbca8!important;background:rgba(255,255,255,.72)!important;transition:.3s}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{outline:none;border-color:var(--rose)!important;box-shadow:0 0 0 3px rgba(201,120,137,.12)}
+.confirm-box{background:linear-gradient(135deg,#f4dfdf,#e5eef1)!important;border-color:rgba(107,48,61,.2)!important}
+.form-actions{gap:12px!important}
+/* Floating contact buttons: recognizable */
+.float-actions{right:22px!important;bottom:22px!important;gap:10px!important}
+.float-actions a{width:50px!important;height:50px!important;border-radius:50%!important;border:1px solid rgba(239,211,155,.7)!important;background:#17110f!important;box-shadow:0 10px 28px rgba(0,0,0,.28)!important;transition:.35s!important}
+.float-actions a:nth-child(1){color:#72d59a!important}.float-actions a:nth-child(2){color:#e6a3b4!important}.float-actions a:nth-child(3){color:#e9d39d!important}
+.float-actions a:hover{transform:translateY(-4px) scale(1.06)!important;background:#fff8ef!important}
+.float-actions svg{width:21px!important;height:21px!important}
+/* Footer */
+.site-footer{background:linear-gradient(135deg,#0c0908,#182d27)!important;border-top:1px solid rgba(239,211,155,.2)}
+.footer-brand>img{width:78px!important;height:78px!important;border-radius:50%;border:1px solid rgba(239,211,155,.65)}
+.footer-column a,.footer-column span{transition:.25s}
+.footer-bottom{border-top-color:rgba(239,211,155,.22)!important}
+/* Scroll reveals */
+.js-reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1)}
+.js-reveal.is-visible{opacity:1;transform:none}
+.js-image-reveal{clip-path:inset(0 0 100% 0);transform:scale(1.035);transition:clip-path 1.05s cubic-bezier(.77,0,.18,1),transform 1.2s cubic-bezier(.22,.61,.36,1)}
+.js-image-reveal.is-visible{clip-path:inset(0);transform:scale(1)}
+@keyframes ambient{to{transform:rotate(360deg)}}
+/* Mobile */
+@media(max-width:900px){
+ .site-header{padding:16px 18px}.primary-nav{gap:0}.primary-nav a{font-size:11px}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:210px}.gallery-grid img:nth-child(1){grid-row:span 2}.gallery-grid img:nth-child(4){grid-column:span 2}.experience-grid{grid-template-columns:1fr 1fr}.duo-panel{min-height:600px}
+}
+@media(max-width:800px){
+ .wordmark img{width:42px!important;height:42px!important}.wordmark{grid-template-columns:42px auto}.wordmark span{font-size:15px}.primary-nav{padding:95px 28px 35px!important;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+ .hero-copy{margin:0 24px;padding-top:180px}.hero h1{font-size:clamp(4.4rem,17vw,7rem)}.hero-actions{flex-wrap:wrap}.section-head{align-items:flex-start;flex-direction:column}.section-head h2{font-size:clamp(3.7rem,14vw,6rem)}
+ .intro-grid{grid-template-columns:1fr}.intro-image{grid-column:1;grid-row:auto;margin-left:0;height:105vw;max-height:580px}.bridal-grid{grid-template-columns:1fr 1fr}.bridal-feature{grid-column:1/-1;height:125vw;max-height:680px}.bridal-small{height:72vw;margin-top:0!important}.bridal-small+.bridal-small{margin-top:0!important}.contact-grid{grid-template-columns:1fr 1fr}.map-card{height:420px}
+ .booking-shell{grid-template-columns:1fr!important}.booking-form{padding:26px!important}.booking-visual{height:260px!important}.float-actions{right:12px!important;bottom:14px!important}.float-actions a{width:44px!important;height:44px!important}
+}
+@media(max-width:560px){
+ .site-header{background:rgba(16,12,11,.92)}.wordmark span{font-size:13px}.wordmark small{font-size:6px}.hero-copy{padding-top:160px}.hero-note{font-size:16px}.hero-actions{gap:12px}.button{padding:14px 15px}.experience-grid{grid-template-columns:1fr}.experience-card,.card-tall{min-height:520px}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:auto}.gallery-grid img,.gallery-grid img:nth-child(4){grid-column:auto;grid-row:auto;height:105vw;max-height:520px}.gallery-grid img:nth-child(1){height:125vw}.contact-grid{grid-template-columns:1fr}.contact-card{min-height:205px!important}.contact-card strong{font-size:27px!important}.page-hero{min-height:68svh}.page-hero-copy h1{font-size:clamp(3.5rem,15vw,6rem)}.hero-badges span{font-size:7px}.float-actions a{width:42px!important;height:42px!important}.float-actions svg{width:18px!important;height:18px!important}.map-caption{left:10px;top:10px}.map-overlay-link{left:10px!important;right:10px!important;bottom:10px!important;text-align:center}.footer-brand>img{width:64px!important;height:64px!important}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* SECOND PASS — tighter editorial spacing + real founder/academy visuals */
+.section-pad{padding:clamp(62px,7vw,100px) clamp(20px,6.5vw,105px)!important}
+.section-head{margin:24px 0 38px!important}
+.section-head h2{margin-top:18px!important}
+.intro-grid{gap:5vw;margin-top:28px!important}
+.intro-image{height:min(42vw,520px)!important;margin-top:2vw!important;margin-left:-3vw!important}
+
+/* Bridal: remove the artificial vertical gaps */
+.bridal .section-head{margin-bottom:34px!important}
+.bridal-grid{gap:18px!important}
+.bridal-feature{height:560px!important}
+.bridal-small{height:390px!important;margin-top:0!important}
+.bridal-small+.bridal-small{margin-top:54px!important}
+
+/* Founder — Shital is the focus, not a model */
+.founder{gap:7vw!important}
+.founder-image{height:570px!important;position:relative;overflow:hidden;border:1px solid rgba(107,48,61,.16)}
+.founder-image img{object-position:center 24%!important;transition:transform 1s cubic-bezier(.2,.65,.25,1)}
+.founder-image:hover img{transform:scale(1.025)}
+.founder-image:after{content:"SHITAL GURAV  /  FOUNDER";position:absolute;left:22px;bottom:20px;padding:10px 13px;background:rgba(16,12,11,.78);border:1px solid rgba(239,211,155,.45);color:var(--gold2);font:500 8px var(--sans);letter-spacing:.22em}
+
+/* Academy preview — useful visual instead of empty logo space */
+.academy-preview{min-height:510px!important;padding-right:clamp(20px,6.5vw,105px)!important;gap:5vw}
+.academy-copy{max-width:560px!important}
+.academy-copy>p:not(.eyebrow){margin:30px 0 28px!important}
+.academy-preview-visual{width:min(38vw,500px);height:390px;position:relative;overflow:hidden;border:1px solid rgba(239,211,155,.35);box-shadow:0 22px 55px rgba(0,0,0,.22);flex:0 0 auto}
+.academy-preview-visual:before{content:"PROFESSIONAL MAKEUP ACADEMY";position:absolute;z-index:2;left:18px;top:18px;padding:9px 11px;background:rgba(10,20,17,.78);border:1px solid rgba(239,211,155,.45);color:var(--gold2);font:500 7px var(--sans);letter-spacing:.2em}
+.academy-preview-visual img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform 1s ease;filter:saturate(.9)}
+.academy-preview-visual:hover img{transform:scale(1.035)}
+
+/* Packages preview — use the space to communicate real pricing */
+.packages{min-height:500px!important}
+.package-inner{width:min(1120px,100%)}
+.package-inner>p:not(.eyebrow){margin:25px 0 24px!important}
+.package-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 28px;text-align:left}
+.package-preview-card{padding:22px 22px 24px;background:rgba(255,250,243,.08);border:1px solid rgba(239,211,155,.25);transition:.4s}
+.package-preview-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.package-preview-card.featured{background:linear-gradient(135deg,rgba(107,48,61,.8),rgba(35,75,62,.62));border-color:rgba(239,211,155,.6)}
+.package-preview-card span{display:block;color:var(--gold2);font:500 8px var(--sans);letter-spacing:.2em;margin-bottom:14px}
+.package-preview-card h3{margin:0 0 8px;color:#fff8ef;font:500 23px var(--serif);letter-spacing:.04em}
+.package-preview-card strong{display:block;color:var(--gold2);font:500 24px var(--serif)}
+.package-preview-card p{margin:8px 0 0;color:#d7c9b4;font:400 13px/1.35 var(--serif)}
+
+/* Gallery / CTA: tighter, still luxurious */
+.gallery-preview .gallery-grid{grid-auto-rows:230px!important}
+.final-cta{height:640px!important}
+.final-copy{padding-top:145px!important}
+
+@media(max-width:900px){
+ .section-pad{padding:58px 24px!important}
+ .bridal-feature{height:520px!important}.bridal-small{height:330px!important}.bridal-small+.bridal-small{margin-top:28px!important}
+ .founder{gap:38px!important}.founder-image{height:520px!important}
+ .academy-preview{min-height:0!important;display:grid!important;grid-template-columns:1fr!important;padding-right:24px!important}
+ .academy-preview-visual{width:100%;height:360px}
+ .package-preview-grid{grid-template-columns:1fr;gap:10px;margin-top:24px}
+ .packages{min-height:0!important}
+ .gallery-preview .gallery-grid{grid-auto-rows:200px!important}
+ .final-cta{height:570px!important}.final-copy{padding-top:115px!important}
+}
+@media(max-width:600px){
+ .section-head{margin-bottom:28px!important}
+ .intro-image{height:115vw!important;max-height:520px;margin-left:0!important}
+ .bridal-grid{grid-template-columns:1fr!important}.bridal-feature{grid-column:1!important;height:115vw!important;max-height:600px}.bridal-small{height:88vw!important;max-height:460px}.bridal-small+.bridal-small{margin-top:0!important}
+ .founder{grid-template-columns:1fr!important}.founder-image{height:125vw!important;max-height:600px}.founder-image:after{font-size:7px}
+ .academy-preview-visual{height:110vw;max-height:480px}
+ .package-preview-card{padding:19px}
+ .gallery-preview .gallery-grid{grid-auto-rows:170px!important}
+}
+
+
+/* ===== FINAL V3 — tighter editorial spacing + stronger image-led sections ===== */
+
+/* Home intro: use the founder portrait beside the copy instead of leaving an empty second row. */
+#about.intro-section{
+  padding-top:clamp(70px,7vw,105px);
+  padding-bottom:clamp(55px,6vw,90px);
+}
+#about .intro-grid{
+  grid-template-columns:minmax(0,1.02fr) minmax(260px,.78fr) minmax(240px,.62fr);
+  gap:clamp(28px,4.5vw,72px);
+  margin-top:36px;
+  align-items:center;
+}
+#about .intro-title{grid-column:1;grid-row:1}
+#about .intro-copy{grid-column:2;grid-row:1;max-width:390px;padding-top:0}
+#about .intro-image{
+  grid-column:3;grid-row:1;
+  width:100%;height:min(38vw,540px);
+  margin:0;
+  position:relative;
+  border:1px solid rgba(122,87,45,.22);
+  background:#eadfd2;
+  overflow:hidden;
+}
+#about .intro-image img{
+  object-position:center 16%!important;
+  filter:saturate(.88);
+}
+#about .intro-image:after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 58%,rgba(14,9,7,.58));
+  pointer-events:none;
+}
+#about .intro-image-caption{
+  position:absolute;left:24px;right:24px;bottom:20px;
+  z-index:2;color:#fff;display:flex;align-items:end;justify-content:space-between;gap:15px;
+}
+#about .intro-image-caption strong{
+  font:500 25px/1 var(--serif);
+}
+#about .intro-image-caption span{
+  font:400 8px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+  color:#ead39f;
+}
+#about .intro-signature{
+  display:flex;flex-wrap:wrap;gap:10px 20px;
+  margin-top:26px;padding-top:17px;
+  border-top:1px solid rgba(126,91,48,.24);
+}
+#about .intro-signature span{
+  font:500 8px var(--sans);letter-spacing:.18em;color:#806640;
+}
+
+/* Kill the oversized vertical gaps on the home sections. */
+#work.section-pad,
+.bridal.section-pad,
+#academy-preview.section-pad,
+.gallery-preview.section-pad,
+#packages.section-pad{
+  padding-top:clamp(72px,7vw,110px);
+  padding-bottom:clamp(72px,7vw,110px);
+}
+#work .section-head{margin-bottom:38px}
+.bridal .section-head{margin-bottom:38px}
+.bridal-grid{gap:18px}
+.bridal-feature{height:570px}
+.bridal-small{height:440px;margin-top:55px!important}
+.bridal-small+ .bridal-small{margin-top:18px!important}
+
+/* Make the Signature Bridal collection visibly start in the same viewport. */
+.bridal-grid img{min-height:0}
+.bridal-grid figure{overflow:hidden}
+.bridal-grid figcaption{margin-top:10px}
+
+/* Party / special occasion image treatment. */
+.experience-card:nth-child(5) img{object-position:center 28%!important}
+.experience-card:nth-child(6) img{object-position:center 48%!important;filter:saturate(.92)}
+
+/* "In the light": replace the huge empty lower half with a deliberate editorial visual. */
+.showcase{
+  min-height:0;
+}
+.showcase .section-label{margin-bottom:32px}
+.showcase-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(360px,.82fr);
+  gap:clamp(40px,8vw,130px);
+  align-items:center;
+}
+.showcase-copy{max-width:650px}
+.showcase-copy h2{
+  margin:20px 0 0;
+  font-size:clamp(5rem,8.5vw,9.5rem);
+  line-height:.7;
+}
+.showcase-deck{
+  max-width:420px;
+  margin:42px 0 30px;
+  font:400 20px/1.42 var(--serif);
+  color:#d7c9b4;
+}
+.showcase-copy .text-link{color:#ead39f;border-color:rgba(229,203,148,.45)}
+.showcase-visual{
+  height:min(43vw,590px);
+  min-height:430px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(239,211,155,.22);
+  box-shadow:0 28px 70px rgba(0,0,0,.22);
+}
+.showcase-visual img{
+  width:100%;height:100%;object-fit:cover;
+  object-position:center 24%!important;
+  filter:saturate(.82);
+  transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.showcase-visual:hover img{transform:scale(1.035)}
+.showcase-caption{
+  position:absolute;left:22px;bottom:18px;
+  font:500 8px var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  color:#f0d89f;
+}
+
+/* Founder section: tighter and visually balanced after the intro. */
+.founder.section-pad{
+  padding-top:clamp(70px,7vw,105px);
+  padding-bottom:clamp(70px,7vw,105px);
+}
+.founder-image{height:min(48vw,620px)}
+
+/* Reduce the blank gap before the next home section. */
+.duo-section{min-height:0}
+.duo-panel{min-height:690px}
+
+/* Mobile: stack the intro cleanly and never create an empty row. */
+@media(max-width:1000px){
+  #about .intro-grid{
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+  }
+  #about .intro-title{grid-column:1;grid-row:1}
+  #about .intro-copy{grid-column:2;grid-row:1}
+  #about .intro-image{
+    grid-column:1/3;grid-row:2;
+    height:min(72vw,560px);
+    margin:0;
+  }
+  .showcase-layout{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  .showcase-visual{height:min(90vw,560px)}
+}
+@media(max-width:700px){
+  #about.intro-section{
+    padding-top:60px;padding-bottom:60px;
+  }
+  #about .intro-grid{
+    grid-template-columns:1fr;
+    margin-top:28px;
+    gap:30px;
+  }
+  #about .intro-title,
+  #about .intro-copy,
+  #about .intro-image{
+    grid-column:1;grid-row:auto;
+  }
+  #about .intro-image{height:115vw;max-height:560px}
+  #about .intro-copy{max-width:none}
+  #about .intro-signature{margin-top:20px}
+  .bridal.section-pad{padding-top:62px;padding-bottom:62px}
+  .bridal .section-head{margin-bottom:28px}
+  .bridal-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .bridal-feature,.bridal-small{height:115vw;max-height:520px;margin-top:0!important}
+  .showcase.section-pad{
+    padding-top:65px;padding-bottom:65px;
+  }
+  .showcase-layout{gap:34px}
+  .showcase-copy h2{font-size:clamp(4.2rem,18vw,6.5rem)}
+  .showcase-deck{margin:28px 0 24px;font-size:18px}
+  .showcase-visual{min-height:390px;height:115vw}
+  .duo-panel{min-height:620px}
+}
